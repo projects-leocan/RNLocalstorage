@@ -13,6 +13,7 @@ export default class App extends React.Component {
         }
     }
 
+    // set value on localStorage
     onSaveValue = async () => {
         const { inputValue } = this.state;
         const value = await LocalStorage.setStorage('INPUT_VALUE', JSON.stringify(inputValue));
@@ -21,6 +22,7 @@ export default class App extends React.Component {
         }
     }
 
+    // set value from localStorage
     onGetValue = async () => {
         const value = await LocalStorage.getStorage('INPUT_VALUE');
         if (value !== undefined) {
@@ -29,6 +31,7 @@ export default class App extends React.Component {
         }
     }
 
+    // clear value from localStorage
     onClearStorage = async () => {
         const value = await LocalStorage.clearStorage();
         if(value) {

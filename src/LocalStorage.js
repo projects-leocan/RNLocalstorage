@@ -4,6 +4,7 @@ import AsyncStorage from '@react-native-community/async-storage'
 
 export default {
 
+    // function for set data on AsyncStorage
     async setStorage(STORAGE_KEY, value) {
         try {
             console.log(STORAGE_KEY)
@@ -16,6 +17,7 @@ export default {
         }
     },
 
+    // function for get data from AsyncStorage
     async getStorage(STORAGE_KEY) {
         try {
             const value = await AsyncStorage.getItem(STORAGE_KEY);
@@ -27,6 +29,7 @@ export default {
         }
     },
 
+    // function for clear AsyncStorage
     async clearStorage() {
         try {
             await AsyncStorage.clear();
